@@ -6,8 +6,6 @@ import Loading from "./Loading";
 
 const Home = () => {
   const { drinks, loading } = useContext(AppContext);
-  console.log(loading);
-
   return (
     <>
       <h1 className="h1Home">Vodka</h1>
