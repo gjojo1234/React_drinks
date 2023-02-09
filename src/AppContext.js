@@ -6,6 +6,12 @@ const url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka";
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [drinks, setDrinks] = useState([]);
+  const [loadInfoPage, setLoadInfoPage] = useState(false);
+  const [oneDrink, setOneDrink] = useState({});
+  const loadInfo = (strDrink, strDrinkThumb) => {
+    setLoadInfoPage(true);
+    setOneDrink({ drink: strDrink, images: strDrinkThumb });
+  };
   const obj = async () => {
     const resp = await fetch(url);
     const data = await resp.json();
@@ -16,7 +22,9 @@ const AppProvider = ({ children }) => {
     obj();
   }, []);
   return (
-    <AppContext.Provider value={{ drinks, loading }}>
+    <AppContext.Provider
+      value={{ drinks, loading, loadInfo, loadInfoPage, oneDrink }}
+    >
       {children}
     </AppContext.Provider>
   );

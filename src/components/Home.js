@@ -2,14 +2,16 @@ import React, { useContext } from "react";
 import { AppContext } from "../AppContext";
 
 import "./home.css";
+import InfoPage from "./InfoPage";
 import Loading from "./Loading";
 
 const Home = () => {
-  const { drinks, loading } = useContext(AppContext);
+  const { drinks, loading, loadInfoPage, loadInfo } = useContext(AppContext);
+
   return (
     <>
       <h1 className="h1Home">Vodka</h1>
-
+      {loadInfoPage && <InfoPage />}
       {loading ? (
         <Loading />
       ) : (
@@ -20,7 +22,12 @@ const Home = () => {
               <div className="container" key={idDrink}>
                 <h2 className="containerTitle">{strDrink}</h2>
                 <img className="containerImage" src={strDrinkThumb} alt="" />
-                <button className="containerButton">more info</button>
+                <button
+                  className="containerButton"
+                  onClick={() => loadInfo(strDrink, strDrinkThumb)}
+                >
+                  more info
+                </button>
               </div>
             );
           })}
