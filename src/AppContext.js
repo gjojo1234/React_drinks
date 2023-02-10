@@ -12,6 +12,10 @@ const AppProvider = ({ children }) => {
     setLoadInfoPage(true);
     setOneDrink({ drink: strDrink, images: strDrinkThumb });
   };
+  function removeInfo() {
+    setOneDrink({});
+    setLoadInfoPage(false);
+  }
   const obj = async () => {
     const resp = await fetch(url);
     const data = await resp.json();
@@ -23,7 +27,7 @@ const AppProvider = ({ children }) => {
   }, []);
   return (
     <AppContext.Provider
-      value={{ drinks, loading, loadInfo, loadInfoPage, oneDrink }}
+      value={{ drinks, loading, loadInfo, loadInfoPage, oneDrink, removeInfo }}
     >
       {children}
     </AppContext.Provider>
