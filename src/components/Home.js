@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../AppContext";
-
-import "./home.css";
+import Wrapper from "../wrappers/homeWrapper.js";
 import InfoPage from "./InfoPage";
 import Loading from "./Loading";
 
@@ -9,7 +8,7 @@ const Home = () => {
   const { drinks, loading, loadInfoPage, loadInfo } = useContext(AppContext);
 
   return (
-    <>
+    <Wrapper>
       <h1 className="h1Home">Vodka</h1>
       {loadInfoPage && <InfoPage />}
       {loading ? (
@@ -33,7 +32,7 @@ const Home = () => {
           })}
         </div>
       )}
-    </>
+    </Wrapper>
   );
 };
 

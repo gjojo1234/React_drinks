@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
-import "./infoPage.css";
+import Wrapper from "../wrappers/infoPageWrapper";
 
 const InfoPage = () => {
   const {
@@ -9,14 +9,16 @@ const InfoPage = () => {
   } = useContext(AppContext);
 
   return (
-    <div className="infoPage">
-      <button onClick={() => removeInfo()} className="cancelBtn">
-        x
-      </button>
-      <h1>{drink}</h1>
+    <Wrapper>
+      <div className="infoPage">
+        <button onClick={() => removeInfo()} className="cancelBtn">
+          x
+        </button>
+        <h1>{drink}</h1>
 
-      <img src={images} alt={drink} />
-    </div>
+        <img src={images} alt={drink} />
+      </div>
+    </Wrapper>
   );
 };
 

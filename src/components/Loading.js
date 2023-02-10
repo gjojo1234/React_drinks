@@ -1,8 +1,12 @@
 import React from "react";
-import "./loading.css";
+import Wrapper from "../wrappers/loadingWrapper";
 
 const Loading = () => {
-  return <h1>Loading</h1>;
+  return (
+    <Wrapper>
+      <h1>Loading.....</h1>
+    </Wrapper>
+  );
 };
 
 export default Loading;
