@@ -5,7 +5,8 @@ const Wrapper = styled.section`
     position: fixed;
     z-index: 10;
     width: 60%;
-    height: 70%;
+    max-width: 800px;
+    height: 60%;
 
     top: 50vh;
     left: 50vw;
@@ -24,8 +25,8 @@ const Wrapper = styled.section`
   }
 
   img {
-    width: 40%;
-    height: 50%;
+    width: 80%;
+    height: 70%;
     border-radius: 1em;
   }
 

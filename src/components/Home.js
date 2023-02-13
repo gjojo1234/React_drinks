@@ -25,7 +25,7 @@ const Home = () => {
                   className="containerButton"
                   onClick={() => loadInfo(strDrink, strDrinkThumb)}
                 >
-                  more info
+                  detail
                 </button>
               </div>
             );
