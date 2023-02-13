@@ -25,8 +25,8 @@ const Wrapper = styled.section`
   }
 
   img {
-    width: 80%;
-    height: 70%;
+    width: 50%;
+    height: 60%;
     border-radius: 1em;
   }
 
