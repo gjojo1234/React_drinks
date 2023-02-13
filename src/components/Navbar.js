@@ -12,7 +12,7 @@ const Navbar = () => {
     <Wrapper>
       <div className="navContainer">
         <div>
-          <h1 className="nadpis">Cocktails</h1>
+          <h1 className="title">Cocktails</h1>
         </div>
 
         <div className="menu">

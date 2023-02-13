@@ -10,7 +10,8 @@ const Wrapper = styled.nav`
     height: 15vh;
     background: linear-gradient(0deg, rgb(239, 231, 231), rgb(136, 136, 240));
   }
-  .nadpis {
+  .title {
+    font-size: 2.5rem;
     padding: 5rem;
     color: rgb(225, 73, 167);
     letter-spacing: 0.1rem;
